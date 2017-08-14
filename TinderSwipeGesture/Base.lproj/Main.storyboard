@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TinderSwipeGesture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,110 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xm2-rm-yw0" userLabel="Card View">
+                                <rect key="frame" x="56" y="171.5" width="263" height="324"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile picture" translatesAutoresizingMaskIntoConstraints="NO" id="i7C-rh-5BS">
+                                        <rect key="frame" x="0.0" y="-0.5" width="263" height="325"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="390 Instagram Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtT-C1-9Mj">
+                                        <rect key="frame" x="20" y="276.5" width="197.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sivajee, 24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzd-pA-NPn">
+                                        <rect key="frame" x="20" y="244" width="102" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="smile_emoji" translatesAutoresizingMaskIntoConstraints="NO" id="fhA-yt-ZJU">
+                                        <rect key="frame" x="8" y="27" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="oe2-xP-ZE2"/>
+                                            <constraint firstAttribute="height" constant="50" id="t65-2k-wiC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="sad_emoji" translatesAutoresizingMaskIntoConstraints="NO" id="bqT-Ox-H0c">
+                                        <rect key="frame" x="205" y="27" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DfF-1b-Q6U"/>
+                                            <constraint firstAttribute="width" constant="50" id="bT6-oV-JD0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bqT-Ox-H0c" firstAttribute="top" secondItem="xm2-rm-yw0" secondAttribute="top" constant="27" id="1VM-Ib-F4A"/>
+                                    <constraint firstAttribute="trailing" secondItem="i7C-rh-5BS" secondAttribute="trailing" id="5Jw-cv-uJo"/>
+                                    <constraint firstAttribute="trailing" secondItem="bqT-Ox-H0c" secondAttribute="trailing" constant="8" id="ChJ-sK-fJ1"/>
+                                    <constraint firstItem="fhA-yt-ZJU" firstAttribute="leading" secondItem="xm2-rm-yw0" secondAttribute="leading" constant="8" id="HhW-SS-rkI"/>
+                                    <constraint firstAttribute="bottom" secondItem="NtT-C1-9Mj" secondAttribute="bottom" constant="24" id="Iy9-cK-YIm"/>
+                                    <constraint firstAttribute="bottom" secondItem="i7C-rh-5BS" secondAttribute="bottom" constant="-0.5" id="Kp6-Tg-aG9"/>
+                                    <constraint firstItem="i7C-rh-5BS" firstAttribute="top" secondItem="xm2-rm-yw0" secondAttribute="top" constant="-0.5" id="L9z-OK-ZfY"/>
+                                    <constraint firstItem="NtT-C1-9Mj" firstAttribute="leading" secondItem="xm2-rm-yw0" secondAttribute="leading" constant="20" id="N6l-aA-d00"/>
+                                    <constraint firstItem="i7C-rh-5BS" firstAttribute="leading" secondItem="xm2-rm-yw0" secondAttribute="leading" id="NzK-6X-Wmc"/>
+                                    <constraint firstAttribute="width" constant="263" id="ULm-zh-TfZ"/>
+                                    <constraint firstItem="Pzd-pA-NPn" firstAttribute="leading" secondItem="NtT-C1-9Mj" secondAttribute="leading" id="c8f-Hn-19T"/>
+                                    <constraint firstItem="NtT-C1-9Mj" firstAttribute="top" secondItem="Pzd-pA-NPn" secondAttribute="bottom" constant="8.5" id="dqI-oG-fQD"/>
+                                    <constraint firstAttribute="height" constant="324" id="jcD-qx-YJG"/>
+                                    <constraint firstItem="fhA-yt-ZJU" firstAttribute="top" secondItem="xm2-rm-yw0" secondAttribute="top" constant="27" id="rxh-XC-NMQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="q70-pk-O51" appends="YES" id="vfh-Sa-hgC"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggo-4W-k7t">
+                                <rect key="frame" x="166" y="39" width="42" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qe0-2l-fJ9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.5568627451" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ggo-4W-k7t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="02v-3Y-uMG"/>
+                            <constraint firstItem="xm2-rm-yw0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="74M-8b-xxS"/>
+                            <constraint firstItem="Ggo-4W-k7t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="Occ-SO-dBl"/>
+                            <constraint firstItem="xm2-rm-yw0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y8i-iC-7uX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardView" destination="xm2-rm-yw0" id="zdo-OS-jVS"/>
+                        <outlet property="sadImageView" destination="bqT-Ox-H0c" id="m6K-tv-yeV"/>
+                        <outlet property="smileImageView" destination="fhA-yt-ZJU" id="oew-Nz-U8H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="q70-pk-O51">
+                    <connections>
+                        <action selector="panGestureValueChanged:" destination="BYZ-38-t0r" id="wyd-cW-Sop"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile picture" width="125" height="349"/>
+        <image name="sad_emoji" width="138" height="139"/>
+        <image name="smile_emoji" width="138" height="139"/>
+    </resources>
 </document>
